@@ -13,10 +13,10 @@ export class Analyzer extends EventEmitter {
       strictSSL: true,
       timeout: options.timeout || 60 * 1000,
       resolveWithFullResponse: true,
-      agentOptions: {
-        ciphers: "ALL",
-        secureProtocol: 'TLS_method'
-      }
+      //agentOptions: {
+      //  ciphers: "ALL",
+      //  secureProtocol: 'TLS_method'
+      //}
     });
   }
 
