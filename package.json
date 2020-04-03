@@ -1,0 +1,14 @@
+{
+  "name": "analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {},
+  "author": "Christian Autermann",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "content-type": "^1.0.4",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
+  }
+}

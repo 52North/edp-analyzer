@@ -1,0 +1,43 @@
+33 GeoJSON: missing type
+1521 ok
+13 HTTP: 406 Not Acceptable
+16 GeoJSON: CRS: unsupported: urn:ogc:def:crs:EPSG::31370
+13 JSON: invalid: text/html
+195 GeoJSON: CRS: invalid extent
+21 GeoJSON: CRS: unsupported: urn:ogc:def:crs:EPSG::4647
+16 JSON: invalid
+48 GeoJSON: CRS: unsupported: urn:ogc:def:crs:EPSG::3763
+97 GeoJSON: null geometry
+5 GeoJSON: CRS: unsupported: EPSG:4647
+86 HTTP: 502 Bad Gateway
+4 HTTP: 404 Not Found
+9 GeoJSON: invalid geometry
+2 HTTP: 400 Bad Request
+1 GeoJSON: invalid type
+92 GeoJSON: CRS: unsupported: EPSG:5514
+5 JSON: invalid: application/zip
+1 JSON: too big: 174MB
+2 JSON: too big: 114MB
+4 HTTP: Error: socket hang up
+1 JSON: too big: 105MB
+4 GeoJSON: CRS: unsupported: EPSG:25832
+1 JSON: too big: 136MB
+3 JSON: too big: 163MB
+3 JSON: too big: 149MB
+2 JSON: too big: 548MB
+1 JSON: too big: 339MB
+1 JSON: too big: 102MB
+1 JSON: too big: 121MB
+1 HTTP: 500 Server Error
+2 JSON: too big: 752MB
+1 JSON: too big: 502MB
+2 JSON: too big: 115MB
+1 JSON: too big: 521MB
+1 JSON: too big: 156MB
+1 JSON: too big: 245MB
+1 JSON: too big: 369MB
+1 JSON: too big: 728MB
+1 JSON: too big: 247MB
+1 JSON: too big: 119MB
+1 JSON: too big: 122MB
+1 JSON: too big: 116MB
