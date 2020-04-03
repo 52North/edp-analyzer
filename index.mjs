@@ -1,15 +1,16 @@
 #!/usr/bin/env -S node --experimental-modules
 
 import { ResourceFetcher } from "./resourceFetcher.mjs";
-import { WMSAnalyzer } from "./wmsAnalyzer.mjs";
-import { GeoJSONAnalyzer } from "./geojsonAnalyzer.mjs";
+import { WMSAnalyzer } from "./wms/wmsAnalyzer.mjs";
+import { GeoJSONAnalyzer } from "./geojson/geojsonAnalyzer.mjs";
 
 async function main() {
   const fetcher = new ResourceFetcher();
 
+
   const analyzers = {
     WMS: new WMSAnalyzer(),
-    GeoJSON: new GeoJSONAnalyzer()
+   // GeoJSON: new GeoJSONAnalyzer()
   };
   const results = {};
 
@@ -18,7 +19,8 @@ async function main() {
     await Promise.all(
       urls.map(async url => {
         const result = await analyzers[format].analyze(url);
-        console.log(`${url}: ${result}`);
+        //console.log(`${url}: ${result}`);
+        console.log(result);
         results[format] = results[format] || {};
         if (!results[format][result]) {
           results[format][result] = 1;

@@ -1,4 +1,4 @@
-export default statusTexts = {
+const statusTexts = {
   100: "Continue",
   101: "Switching Protocols",
   102: "Processing",
@@ -10,9 +10,11 @@ export default statusTexts = {
   205: "Reset Content",
   206: "Partial Content",
   207: "Multi-Status",
+  208: "Already Reported",
+  226: "IM Used",
   300: "Multiple Choices",
   301: "Moved Permanently",
-  302: "Moved Temporarily",
+  302: "Found",
   303: "See Other",
   304: "Not Modified",
   305: "Use Proxy",
@@ -39,18 +41,30 @@ export default statusTexts = {
   418: "I'm a teapot",
   419: "Insufficient Space on Resource",
   420: "Method Failure",
+  421: "Misdirected Request",
   422: "Unprocessable Entity",
   423: "Locked",
   424: "Failed Dependency",
+  426: "Upgrade Required",
   428: "Precondition Required",
   429: "Too Many Requests",
   431: "Request Header Fields Too Large",
+  444: "Connection Closed Without Response",
+  451: "Unavailable For Legal Reasons",
+  499: "Client Closed Request",
+  500: "Internal Server Error",
   500: "Server Error",
   501: "Not Implemented",
   502: "Bad Gateway",
   503: "Service Unavailable",
   504: "Gateway Timeout",
   505: "HTTP Version Not Supported",
+  506: "Variant Also Negotiates",
   507: "Insufficient Storage",
-  511: "Network Authentication Required"
+  508: "Loop Detected",
+  510: "Not Extended",
+  511: "Network Authentication Required",
+  599: "Network Connect Timeout Error"
 };
+
+export default statusTexts;
