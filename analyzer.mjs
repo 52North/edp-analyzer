@@ -25,15 +25,16 @@ export class Analyzer extends EventEmitter {
   }
 
   checkURL(url) {
+    let u = null;
     try {
-      const u = new URL(url);
-      if (u.hostname === "localhost") {
-        throw new Error("localhost");
-      }
-      return u;
+       u = new URL(url);
     } catch (err) {
       throw new Error("invalid url");
     }
+    if (u.hostname === "localhost") {
+      throw new Error("localhost");
+    }
+    return u;
   }
 
   checkContentLength(response) {
