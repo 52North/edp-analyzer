@@ -9,8 +9,8 @@ async function main() {
 
 
   const analyzers = {
+    GeoJSON: new GeoJSONAnalyzer(),
     WMS: new WMSAnalyzer(),
-   // GeoJSON: new GeoJSONAnalyzer()
   };
   const results = {};
 
