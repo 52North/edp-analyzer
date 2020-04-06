@@ -27,7 +27,31 @@ export class WMSAnalyzer extends Analyzer {
     } catch (err) {
       return `XML: ${err.message}`;
     }
+
+    try {
+      this.checkXML(xml);
+    } catch (err) {
+      return `WMS: ${err.message}`;
+    }
+
     return "ok";
+  }
+
+  checkXML(xml) {
+    const roots = Object.keys(xml);
+    if (roots.length == 0) {
+      throw new Error("no root element");
+    }
+
+    let root;
+
+    if (xml.WMS_Capabilities) {
+      root = xml.WMS_Capabilities
+    } else if (xml.WMT_MS_Capabilities) {
+      root = xml.WMT_MS_Capabilities;
+    } else {
+      throw new Error(`unknown root element: ${roots[0]}`);
+    }
   }
 
   async parseXML(response) {
@@ -52,7 +76,7 @@ export class WMSAnalyzer extends Analyzer {
     let serviceFound = false;
     let requestFound = false;
     const param = url.searchParams;
-    for (let [key, value] of param.entries()) {
+    for (let [key] of param.entries()) {
       switch (key.toLowerCase()) {
         case "service":
           param.set(key, "WMS");
